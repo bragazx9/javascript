@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio do Clique</title>
+    <style>
+        #square {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            transition: width 0.3s, height 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div id="square"></div>
+
+    <script>
+        const square = document.getElementById('square');
+        square.addEventListener('click', () => {
+            const currentWidth = square.offsetWidth;
+            const currentHeight = square.offsetHeight;
+            if (currentWidth > 0 && currentHeight > 0) {
+                square.style.width = (currentWidth - 20) + 'px';
+                square.style.height = (currentHeight - 20) + 'px';
+            } else {
+                square.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

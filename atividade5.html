@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button onclick="myFunction()">Clique aqui para começar sua historia</button>
+
+    <script>
+        function myFunction() {
+            if (confirm("Você está preso, deseja escapar?")) {
+                if (confirm("Você encontrou uma janela, deseja pular?")) {
+                    document.getElementById("demo").innerHTML = "Você pulou pela janela e escapou!";
+                } else {
+                    document.getElementById("demo").innerHTML = "Você decidiu não pular e foi pego!";
+                    }   
+                }
+           
+        }
+        
+    </script>
+</body>
+
+</html>
